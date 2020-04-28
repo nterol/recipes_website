@@ -1,0 +1,59 @@
+.ingredientsContainer {
+    display: inline-block;
+    padding: 1.7rem;
+
+    background: #ffafbd; 
+    background: -webkit-linear-gradient(
+        to left,
+        #ffc3a0,
+        #ffafbd
+    ); 
+    background: linear-gradient(
+        to left,
+        #ffc3a0,
+        #ffafbd
+    ); 
+
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+        -8px -8px 10px 0 rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    color: white;
+    font-family: 'avenir';
+    margin-bottom: 3rem;
+
+    p {
+        margin: 0;
+    }
+}
+
+.recipeContainer {
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.25rem;
+}
+
+.navButton {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-family: 'avenir';
+    background-color: white;
+
+    a {
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: #dc7f9c;
+    }
+
+    &:hover {
+        background-color: #dc7f9c;
+    }
+
+    &:hover > a {
+        color: white;
+    }
+}

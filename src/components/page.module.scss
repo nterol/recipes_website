@@ -1,0 +1,17 @@
+.pageContainer {
+  padding: 2em;
+  // background: #cecece;
+  max-width: 1100px;
+  & > {
+    * + * {
+      border: 1px solid blue;
+      margin-top: 2em;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 1em;
+}
