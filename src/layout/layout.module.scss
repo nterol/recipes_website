@@ -8,11 +8,4 @@
     @include for-phone-only {
         padding: 1.0875rem 0;
     }
-
-    & > {
-        * + * {
-            border: 1px solid blue;
-            margin-top: 1rem;
-        }
-    }
 }

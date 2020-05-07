@@ -10,6 +10,8 @@ import {
 } from '../context/recipeListContext';
 import { addRecipe, removeRecipe } from '../context/actionTypes';
 import Img from 'gatsby-image';
+import { FaStar, FaRegStar } from 'react-icons/fa';
+import { FiX } from 'react-icons/fi';
 
 function Recipes({ data, pageContext }) {
     const {
@@ -18,8 +20,6 @@ function Recipes({ data, pageContext }) {
     } = data.markdownRemark;
 
     const { next, prev } = pageContext;
-
-    console.log('🛒', rayons);
 
     const dispatchRecipeList = useDispatchRecipeList();
     const recipeList = useRecipeList();
@@ -43,37 +43,37 @@ function Recipes({ data, pageContext }) {
         <Layout>
             <section className={styles.recipeHeader}>
                 <h1 className={styles.recipeTitle}>{title}</h1>
-
                 <div className={styles.imgContainer}>
-                    <Img alt={title} fluid={thumbnail.childImageSharp.fluid} />
+                    {thumbnail && <Img alt={title} fluid={thumbnail.childImageSharp.fluid} />}
                     <button
                         type="button"
                         className={styles.favButton}
+                        type="button"
                         onClick={handleClickRecipe}
                     >
-                        Add !
+                        {isInCart ? (
+                            <FaStar size="3em" color="#ffafbd" />
+                        ) : (
+                            <FaRegStar size="3em" color="#ffafbd" />
+                        )}
                     </button>
                 </div>
             </section>
-            <section className={styles.ingredientsContainer}>
-                <h2 style={{ fontSize: '1.5rem' }}>Ingrédients :</h2>
-                <IngredientList rayons={rayons} />
+            <section className={styles.paraRecipe}>
+                <div className={styles.ingredientsContainer}>
+                    <h2>Ingrédients</h2>
+                    <IngredientList rayons={rayons} />
+                </div>
             </section>
             <section
                 className={styles.recipeContainer}
                 dangerouslySetInnerHTML={{ __html: html }}
             />
+
             <div className={styles.navContainer}>
-                {next && (
-                    <button className={styles.navButton}>
-                        <Link to={next}>&larr; Recette suivante </Link>
-                    </button>
-                )}
-                {prev && (
-                    <button className={styles.navButton}>
-                        <Link to={prev}>Recette Précédente &rarr;</Link>
-                    </button>
-                )}
+                <Link to="/">
+                    <FiX size="5em" color="#ffafbd" />
+                </Link>
             </div>
         </Layout>
     );

@@ -38,7 +38,7 @@ rayons:
     unit: boîte de 
 ---
 
-## Recette :
+## Recette
 1. [Emincer](https://fr.wiktionary.org/wiki/%C3%A9mincer) grossièrement les oignons et les faire rissoler
 2. Eplucher puis couper Les patates douces en cubes. Cuire dans une casserole d'eau bouillante avec du bouillon pendant 15 minutes
 3. Rincer les herbes puis les hacher
@@ -49,7 +49,7 @@ rayons:
 8. Dans un plat, couvrir le fond de viande dans son jus, recouvrir avec la purée de patate douce. Rajouter du fromage rapée
 9. Faire cuire 35 minutes au four. 
     
-## Tip 💡:
+## Tip 💡
 Un recette plutôt longue à préparer.
 
 En fin de cuisson, ajouter quelques feuilles d'épinards dans la bouillon de viande avant d'enfourner !

@@ -25,11 +25,11 @@ const Header = ({ title, description }) => {
 
     return (
         <header className={styles.header}>
-            <div style={{ display: 'flex', justifyContent:"space-between"}}>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <h1 className={styles.title}>
                     <Link to="/">{title}</Link>
                 </h1>
-                <Burger />
+                {/* <Burger /> */}
             </div>
 
             <nav className={styles.navContainer}>

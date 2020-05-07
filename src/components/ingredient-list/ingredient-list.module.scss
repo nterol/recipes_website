@@ -1,5 +1,4 @@
 .listContainer {
-
     h3 {
         margin-bottom: 0.5rem;
     }
@@ -10,6 +9,10 @@
     hr {
         margin-top: 1rem;
         border-radius: 4px;
+    }
+
+    li {
+        margin-left: calc(1.45rem / 2);
     }
 }
 

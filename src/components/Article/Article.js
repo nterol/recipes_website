@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from "gatsby-image"
+import Img from 'gatsby-image';
 
 import styles from './article.module.scss';
 import { Link } from 'gatsby';
@@ -21,7 +21,23 @@ const Article = ({ title, date, tags, excerpt, path, thumbnail }) => {
     return (
         <article className={styles.article}>
             <header>
-               {thumbnail ?  <Img alt={title} fluid={thumbnail.childImageSharp.fluid} /> : <hr style={{paddingBottom: "300px"}}/>}
+                {thumbnail ? (
+                    <Img
+                        style={{
+                            maxHeight: '12em',
+                            borderRadius: '5px 5px 0 0 ',
+                        }}
+                        alt={title}
+                        fluid={thumbnail.childImageSharp.fluid}
+                    />
+                ) : (
+                    <hr
+                        style={{
+                            paddingBottom: '12em',
+                            borderRadius: '5px 5px 0 0 ',
+                        }}
+                    />
+                )}
             </header>
             <main className={styles.container}>
                 <Link to={path}>

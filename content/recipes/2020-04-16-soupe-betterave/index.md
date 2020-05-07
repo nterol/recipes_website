@@ -25,13 +25,13 @@ rayons:
 thumbnail: ./soupe_betteraves.jpeg
 ---
 
-## Recette : 
+## Recette
 
 1. Je sais pas 
 2. J'en sais rien
 3. Prrrt
 4. ma Langue au chat
 
-## Tips : 
+## Tips
 
 Yo what up bro

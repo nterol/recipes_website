@@ -8,9 +8,9 @@ const IngredientList = ({ rayons }) => (
             <React.Fragment key={rayon}>
                 <h3 className={styles.listTitle}>{rayon}</h3>
                 {ingredients.map(({ ingredient, quantity, unit }) => (
-                    <p key={ingredient}>{`${quantity} ${
+                    <li key={ingredient}>{` ${quantity} ${
                         unit || ''
-                    } ${ingredient}${quantity > 1 && !unit ? 's' : ''}`}</p>
+                    } ${ingredient}${quantity > 1 && !unit ? 's' : ''}`}</li>
                 ))}
                 <hr />
             </React.Fragment>

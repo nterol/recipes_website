@@ -7,6 +7,7 @@
 
     @include for-phone-only {
         flex-direction: column;
+        justify-content: flex-start;
     }
 }
 
@@ -17,25 +18,28 @@
     & img {
         border-radius: 5px;
     }
+    min-height: 5em;
 }
 
 .favButton {
+    border: none;
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    background: white;
-    border-radius: 4px;
-    color: black;
-    padding: 1rem;
-    font-family: 'avenir';
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
 }
 
 .ingredientsContainer {
+    h2 {
+        font-size: 1.5rem;
+        text-decoration: underline;
+    }
     padding: 1.7rem;
-    background: #ffafbd;
+    background: #ffafbcb8;
     border-radius: 5px;
-    color: white;
+    color: #353539;
     font-family: 'avenir';
+    font-weight: 700;
     margin-bottom: 3rem;
 
     p {
@@ -49,8 +53,22 @@
 }
 
 .recipeContainer {
-    color: #848484;
+    color: #353539;
     font-family: 'avenir';
+
+    h2 {
+        font-size: 1.5rem;
+        text-decoration: underline;
+    }
+
+    a,
+    a:visited {
+        color: black;
+    }
+
+    li {
+        font-weight: 400;
+    }
 }
 
 .navContainer {

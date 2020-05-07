@@ -21,7 +21,7 @@ rayons:
 thumbnail: ./moelleux_chocolat.jpg
 ---
 
-## Recette :
+## Recette
 1. Faire fondre le chocolat
 2. Manger du beurre
 3. Ajouter du poulet
