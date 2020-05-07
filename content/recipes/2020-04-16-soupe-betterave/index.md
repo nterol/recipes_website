@@ -3,7 +3,9 @@ path: "/soupe-betteraves"
 date: 2020-04-18
 title: "Soupe de betteraves"
 author: Saint Honorée
-tags: ["veggie", "sans four"]
+tags:
+- Veggie 
+- Sans four
 excerpt: "Un plat rose et frais"
 prep: "30min"
 rayons:

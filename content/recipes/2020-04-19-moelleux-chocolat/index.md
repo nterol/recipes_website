@@ -2,7 +2,9 @@
 path: "/moelleux-chocolat"
 title: "Petits moëlleux au chocolat"
 date: "2020-04-19T08:30:00.0000Z"
-tags: ["desserts", "chocolat"]
+tags: 
+- Dessert
+- Chocolat
 excerpt: "Un peu de douceur dès le matin"
 prep: "20 min"
 cooking: "20 min"

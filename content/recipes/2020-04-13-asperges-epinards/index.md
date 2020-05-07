@@ -2,7 +2,9 @@
 path: "/asperges-epinards"
 date: 2020-04-13
 title: "Asperges et lentilles"
-tags: ["veggie", "sans four"]
+tags: 
+- Veggie 
+- Sans four
 excerpt: "C'est bon pour le moral"
 prep: "30 min"
 cooking: "20 min"

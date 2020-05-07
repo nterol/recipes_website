@@ -2,11 +2,14 @@
 path: "/hachis-patates-douces"
 date: "2020-04-19T10:30:00"
 title: "Hachis Parmentier de patates douces"
-tags: ["avec four", "viande"]
+tags:
+- Viande
+- Four
 excerpt: "Un hachis plein de douceur"
 prep: "30 min"
 cooking: "40 min"
 author: Saint Honorée
+thumbnail: ./hachis_patates_douces.jpg
 pers : 6
 rayons:
 - rayon: Fruits et légumes
@@ -33,7 +36,6 @@ rayons:
   - ingredient: tomates concassées
     quantity : 1
     unit: boîte de 
-thumbnail: ./hachis_patates_ddouces.jpg
 ---
 
 ## Recette :

@@ -1,22 +1,39 @@
+@import '../components/responsive.scss';
+
+.recipeHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include for-phone-only {
+        flex-direction: column;
+    }
+}
+
+.imgContainer {
+    width: 100%;
+    position: relative;
+    margin-bottom: 1.5rem;
+    & img {
+        border-radius: 5px;
+    }
+}
+
+.favButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: white;
+    border-radius: 4px;
+    color: black;
+    padding: 1rem;
+    font-family: 'avenir';
+}
+
 .ingredientsContainer {
-    display: inline-block;
     padding: 1.7rem;
-
-    background: #ffafbd; 
-    background: -webkit-linear-gradient(
-        to left,
-        #ffc3a0,
-        #ffafbd
-    ); 
-    background: linear-gradient(
-        to left,
-        #ffc3a0,
-        #ffafbd
-    ); 
-
-    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
-        -8px -8px 10px 0 rgba(255, 255, 255, 0.3);
-    border-radius: 1rem;
+    background: #ffafbd;
+    border-radius: 5px;
     color: white;
     font-family: 'avenir';
     margin-bottom: 3rem;
@@ -26,7 +43,14 @@
     }
 }
 
+.recipeTitle {
+    font-family: 'avenir';
+    font-size: 1.45rem;
+}
+
 .recipeContainer {
+    color: #848484;
+    font-family: 'avenir';
 }
 
 .navContainer {
@@ -46,11 +70,11 @@
     }
 
     a:visited {
-        color: #dc7f9c;
+        color: #ffafbd;
     }
 
     &:hover {
-        background-color: #dc7f9c;
+        background-color: #ffafbd;
     }
 
     &:hover > a {

@@ -18,6 +18,13 @@ export const query = graphql`
                         date
                         excerpt
                         tags
+                        thumbnail {
+                            childImageSharp {
+                                fluid(maxWidth: 430, quality: 70) {
+                                    ...GatsbyImageSharpFluid_withWebp
+                                } 
+                            }
+                        }
                     }
                 }
             }
@@ -27,6 +34,8 @@ export const query = graphql`
 
 const IndexPage = ({ data }) => {
     const { edges } = data.allMarkdownRemark;
+
+    console.log(edges);
 
     return (
         <Layout>

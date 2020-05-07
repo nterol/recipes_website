@@ -1,28 +1,40 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import c from 'classnames';
 
 import styles from './header.module.scss';
 // import { useRecipeList } from '../../context/recipeListContext';
+
+const Burger = () => {
+    const [isOpen, setOpen] = React.useState(false);
+    return (
+        <div
+            onClick={() => setOpen(!isOpen)}
+            className={c(styles.burger, { [styles.open]: isOpen })}
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    );
+};
 
 const Header = ({ title, description }) => {
     // const recipeList = useRecipeList();
 
     return (
-        <header className={styles.header} style={{ border: '1px solid blue' }}>
-            <nav
-                className={styles.headerContainer}
-                style={{ display: 'grid', gridTemplateColumns: '2fr 3fr' }}
-            >
-                <div>
-                    <h1 className={styles.title}>
-                        <Link to="/">{title}</Link>
-                    </h1>
-                    <h2 className={styles.subTitle}>{description}</h2>
-                </div>
-                <div style={{ border: '1px solid pink' }}>
-                    <Link to="/panier">Mon panier</Link>
-                </div>
+        <header className={styles.header}>
+            <div style={{ display: 'flex', justifyContent:"space-between"}}>
+                <h1 className={styles.title}>
+                    <Link to="/">{title}</Link>
+                </h1>
+                <Burger />
+            </div>
+
+            <nav className={styles.navContainer}>
+                <Link to="/panier">Mes courses</Link>
+                <Link to="/tags">Tags</Link>
             </nav>
         </header>
     );

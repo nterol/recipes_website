@@ -2,13 +2,15 @@
 path: "/curry-tofu"
 date: 2020-04-15T10:30:00.0000Z
 title: "Curry de Tofu fumé et boulgour"
-tags: ["veggie", "sans four"]
+tags:
+- Veggie 
+- Sans four
 excerpt: "Comme une petite envie d'Inde"
 prep: "30 min"
 cooking: "30min"
 author: Saint Honorée
 ingredients: 
-thumbnail: ./curry_tofu.jpegs
+thumbnail: ./curry_tofu.jpeg
 rayons:
 - rayon: Conserves / Epicerie
   ingredients:

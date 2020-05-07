@@ -1,7 +1,13 @@
+@import '../components/responsive.scss';
+
 .layoutContainer {
     margin: 0 auto;
-    max-width: 960px;
-    padding: 0 1.0875rem 1.45rem;
+    max-width: 90vw;
+    padding:  1.0875rem 1.45rem;
+
+    @include for-phone-only {
+        padding: 1.0875rem 0;
+    }
 
     & > {
         * + * {

@@ -9,11 +9,12 @@ import {
     useRecipeList,
 } from '../context/recipeListContext';
 import { addRecipe, removeRecipe } from '../context/actionTypes';
+import Img from 'gatsby-image';
 
 function Recipes({ data, pageContext }) {
     const {
         html,
-        frontmatter: { rayons, title },
+        frontmatter: { rayons, title, thumbnail },
     } = data.markdownRemark;
 
     const { next, prev } = pageContext;
@@ -40,35 +41,22 @@ function Recipes({ data, pageContext }) {
 
     return (
         <Layout>
-            <header
-                style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                }}
-            >
-                <h1>{title}</h1>
-                <button
-                    type="button"
-                    style={{
-                        borderRadius: '4px',
-                        background: isInCart ? 'green' : 'white',
-                        color: isInCart ? 'white' : 'black',
-                        padding: '1rem',
-                        fontFamily: 'avenir',
-                    }}
-                    onClick={handleClickRecipe}
-                >
-                    Add !
-                </button>
-            </header>
+            <section className={styles.recipeHeader}>
+                <h1 className={styles.recipeTitle}>{title}</h1>
+
+                <div className={styles.imgContainer}>
+                    <Img alt={title} fluid={thumbnail.childImageSharp.fluid} />
+                    <button
+                        type="button"
+                        className={styles.favButton}
+                        onClick={handleClickRecipe}
+                    >
+                        Add !
+                    </button>
+                </div>
+            </section>
             <section className={styles.ingredientsContainer}>
-                <h2 style={{ fontSize: '1.5rem' }}>
-                    <span role="img" aria-label="liste d'ingrédients">
-                        📝
-                    </span>{' '}
-                    Ingrédients :
-                </h2>
+                <h2 style={{ fontSize: '1.5rem' }}>Ingrédients :</h2>
                 <IngredientList rayons={rayons} />
             </section>
             <section
@@ -97,6 +85,13 @@ export const query = graphql`
             html
             frontmatter {
                 title
+                thumbnail {
+                    childImageSharp {
+                        fluid(maxWidth: 570, quality: 70) {
+                            ...GatsbyImageSharpFluid_withWebp
+                        }
+                    }
+                }
                 rayons {
                     rayon
                     ingredients {

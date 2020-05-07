@@ -21,8 +21,7 @@ const Layout = ({ children }) => {
     `);
     console.log(data);
     return (
-        <>
-            
+        <>  
             <Header  {...data.site.siteMetadata} />
             <div className={styles.layoutContainer}>
                 <main>{children}</main>
