@@ -56,14 +56,14 @@ exports.createPages = ({ graphql, actions }) => {
                 component: recipePostTemplate,
                 context: {
                     pathSlug: path,
-                    prev:
-                        index === 0
-                            ? null
-                            : posts[index - 1].node.frontmatter.path,
-                    next:
-                        index === posts.length - 1
-                            ? null
-                            : posts[index + 1].node.frontmatter.path,
+                    // prev:
+                    //     index === 0
+                    //         ? null
+                    //         : posts[index - 1].node.frontmatter.path,
+                    // next:
+                    //     index === posts.length - 1
+                    //         ? null
+                    //         : posts[index + 1].node.frontmatter.path,
                 },
             });
         });

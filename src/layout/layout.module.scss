@@ -1,11 +1,9 @@
 @import '../components/responsive.scss';
 
 .layoutContainer {
-    margin: 0 auto;
-    max-width: 90vw;
-    padding:  1.0875rem 1.45rem;
+    padding: 1.0875rem 3.45rem;
 
     @include for-phone-only {
-        padding: 1.0875rem 0;
+        padding: 1.0875rem 1.75rem;
     }
 }
