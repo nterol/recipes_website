@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: https://github.com/nterol/recipes_website
+  repo: nterol/recipes_website
 
 media_folder: static/assets
 public_folder: /assets
