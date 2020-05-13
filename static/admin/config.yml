@@ -1,17 +1,43 @@
 backend:
-  name: git-gateway
-  repo: nterol/recipes_website
+    name: git-gateway
+    repo: nterol/recipes_website
 
 media_folder: static/assets
 public_folder: /assets
 
-collections: 
-  - name: Popotes de potes
-    label: popotes de potes
-    folder: blog
-    create: true
-    fields: 
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+collections:
+    - name: recipes
+      label: Nouvelle recettes
+      folder: content/recipes
+      create: true
+      fields:
+          - { name: path, label: Path }
+          - { name: date, label: Date, widget: datetime }
+          - { name: title, label: Titre }
+          - { name: thumbnail, label: Image, widget: image, allow_multiple: false }
+          - name: rayons,
+            label: Ingredients
+            widget: list
+            fields: 
+              - name: rayon 
+                label: Rayon 
+                widget: select 
+                options: ["Fruits et légumes", "Boucherie", "Conserves et épicerie", "Fromages et laitages"]
+              - name: ingredient
+                label: Ingredient
+                widget: object
+                fields:
+                - { name: name, label: Nom, widget: string} 
+                - { name: quantity, label: "Quantité", widget: number}
+                - { name: unit, label: "Unité", widget: string }
+          - { name: body, label: Body, widget: markdown, default: "## Recette
+          
+          1. Ceci est 
+          
+          2. un exemple de 
+          
+          3. recette 🤩
+          
+          ## Tip
+          
+          ajustez le selon votre envie !" }

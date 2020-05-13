@@ -13,13 +13,12 @@ import Img from 'gatsby-image';
 import { FaStar, FaRegStar } from 'react-icons/fa';
 import { FiX } from 'react-icons/fi';
 
-function Recipes({ data, pageContext }) {
+function Recipes({ data }) {
     const {
         html,
         frontmatter: { rayons, title, thumbnail },
     } = data.markdownRemark;
 
-    const { next, prev } = pageContext;
 
     const dispatchRecipeList = useDispatchRecipeList();
     const recipeList = useRecipeList();
