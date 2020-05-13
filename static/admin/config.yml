@@ -8,14 +8,14 @@ public_folder: /assets
 collections:
     - name: recipes
       label: Nouvelle recettes
-      folder: content/recipes
+      folder: content/recipes/{{fields.date.year}}-{{fields.date.month}}-{{fields.date.day}}-{{fields.path}}
       create: true
       fields:
           - { name: path, label: Path }
           - { name: date, label: Date, widget: datetime }
           - { name: title, label: Titre }
           - { name: thumbnail, label: Image, widget: image, allow_multiple: false }
-          - name: rayons,
+          - name: rayons
             label: Ingredients
             widget: list
             fields: 
