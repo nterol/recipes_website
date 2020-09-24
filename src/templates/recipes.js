@@ -56,7 +56,7 @@ function Recipes({ data }) {
                             <FaRegStar size="3em" color="#ffafbd" />
                         )}
                     </button>
-                </div>
+                </div>  
             </section>
             <section className={styles.paraRecipe}>
                 <div className={styles.ingredientsContainer}>

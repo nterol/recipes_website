@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "bichat_recette",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A website about recipes",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "nterol",
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "^2.20.12",

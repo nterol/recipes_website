@@ -14,7 +14,7 @@ export const query = graphql`
                 node {
                     frontmatter {
                         title
-                        path
+                        pathteamplte
                         date
                         excerpt
                         tags
@@ -26,7 +26,7 @@ export const query = graphql`
                             }
                         }
                     }
-                }
+                } 
             }
         }
     }
